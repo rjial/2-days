@@ -1,0 +1,63 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "renpy/common/00gamemenu.rpy", line 173, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 173, in <module>
+    $ ui.interact()
+  File "renpy/common/00action_file.rpy", line 359, in __call__
+    renpy.save(fn, extra_info=save_name)
+PicklingError: Can't pickle <class 'store.director.AddStatement'>: it's not the same object as store.director.AddStatement
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/00gamemenu.rpy", line 173, in script
+    $ ui.interact()
+  File "/home/gintoki/renpy/renpy/ast.py", line 827, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/gintoki/renpy/renpy/python.py", line 1764, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/00gamemenu.rpy", line 173, in <module>
+    $ ui.interact()
+  File "/home/gintoki/renpy/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/gintoki/renpy/renpy/display/core.py", line 2553, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/gintoki/renpy/renpy/display/core.py", line 3237, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "/home/gintoki/renpy/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/gintoki/renpy/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/gintoki/renpy/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/gintoki/renpy/renpy/display/screen.py", line 653, in event
+    rv = self.child.event(ev, x, y, st)
+  File "/home/gintoki/renpy/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/gintoki/renpy/renpy/display/layout.py", line 232, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "/home/gintoki/renpy/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/gintoki/renpy/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/gintoki/renpy/renpy/display/behavior.py", line 897, in event
+    return handle_click(self.clicked)
+  File "/home/gintoki/renpy/renpy/display/behavior.py", line 832, in handle_click
+    rv = run(action)
+  File "/home/gintoki/renpy/renpy/display/behavior.py", line 299, in run
+    new_rv = run(i, *args, **kwargs)
+  File "/home/gintoki/renpy/renpy/display/behavior.py", line 306, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_file.rpy", line 359, in __call__
+    renpy.save(fn, extra_info=save_name)
+  File "/home/gintoki/renpy/renpy/loadsave.py", line 300, in save
+    dump((roots, renpy.game.log), logf)
+  File "/home/gintoki/renpy/renpy/loadsave.py", line 45, in dump
+    cPickle.dump(o, f, cPickle.HIGHEST_PROTOCOL)
+PicklingError: Can't pickle <class 'store.director.AddStatement'>: it's not the same object as store.director.AddStatement
+
+Linux-4.10.0-40-generic-x86_64-with-debian-stretch-sid
+Ren'Py 6.99.13.2919
+2 Days 1.0

@@ -1,0 +1,13 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/function.rpy", line 1: python block expects a non-empty block.
+    init python:
+                ^
+
+File "game/function.rpy", line 2: expected statement.
+    def delete_all_saves():
+                        ^
+
+Ren'Py Version: Ren'Py 6.99.13.2919
